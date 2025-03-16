@@ -27,7 +27,7 @@ function Checkout() {
             if (data.length > 0) {
                 const infos = {
                     ...data[0],
-                    enderecos: JSON.parse(data[0].enderecos),
+                    enderecos: JSON.parse(data[0].enderecos) ?? [],
                 };
                 setDatas(infos);
             }
