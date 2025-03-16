@@ -63,7 +63,7 @@ function Filtro({ setParams, params, prods }) {
                     <div className="filtro__titulo">
                         <div className="filtro__img">
                             <img
-                                src="./filters-2-svgrepo-com.svg"
+                                src="https://raw.githubusercontent.com/edsoncarvalhointuria/FakeReservaReact/bb74e2bd90ce815cd798f96f25942c31221e7eac/dist/filters-2-svgrepo-com.svg"
                                 alt="Imagem Filtro"
                             />
                         </div>

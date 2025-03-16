@@ -322,7 +322,7 @@ function Loja() {
                                 <div className="produtos__titulo">
                                     <div className="produtos__imagem">
                                         <img
-                                            src="./arrows-vertical-svgrepo-com.svg"
+                                            src="https://raw.githubusercontent.com/edsoncarvalhointuria/FakeReservaReact/bb74e2bd90ce815cd798f96f25942c31221e7eac/dist/arrows-vertical-svgrepo-com.svg"
                                             alt="Icone Setas"
                                         />
                                     </div>
