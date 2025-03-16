@@ -21,7 +21,7 @@ function Pesquisa() {
                 .catch((err) => console.log("erro"));
         else redirect("/");
         window.scroll({ top: 10, behavior: "smooth" });
-    }, []);
+    }, [params]);
 
     useEffect(() => {
         let lista = [...prods.current];

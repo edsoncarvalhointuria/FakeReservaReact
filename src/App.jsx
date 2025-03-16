@@ -14,6 +14,7 @@ import Login from "./pages/login/Login";
 import MinhaConta from "./pages/minha_conta/MinhaConta";
 import MeusPedidos from "./pages/meus_pedidos/MeusPedidos";
 import MeusPedidosDetalhes from "./pages/meus_pedidos/MeusPedidosDetalhes";
+import NotFound from "./pages/notfound/NotFound";
 import { checkSession } from "./context/session";
 import { useLoginContext } from "./context/LoginContext";
 
@@ -76,6 +77,7 @@ function App() {
                 ) : (
                     <></>
                 )}
+                <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />
         </>

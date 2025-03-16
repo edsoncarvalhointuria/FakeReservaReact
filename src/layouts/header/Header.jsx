@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { getHeader } from "../../context/api";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import MenuItem from "./MenuItem";
 import { useCarrinhoContext, qtdCarrinho } from "../../context/CarrinhoContext";
 import { useLoginContext } from "../../context/LoginContext";
@@ -410,6 +410,7 @@ const teste2 = [
 ];
 
 function Header() {
+    const redirect = useNavigate();
     const [isOpen, setMenu] = useState(false);
     const [menu, setItens] = useState([]);
     const { cart } = useCarrinhoContext();
@@ -494,8 +495,14 @@ function Header() {
                         >
                             <form
                                 className={header["nav__form"]}
-                                method="get"
-                                action={"/loja/pesquisa"}
+                                onSubmit={(e) => {
+                                    e.preventDefault();
+                                    const form = new FormData(e.target)
+                                        .get("pesquisa")
+                                        .split(" ")
+                                        .join("+");
+                                    redirect(`/loja/pesquisa?pesquisa=${form}`);
+                                }}
                             >
                                 <input
                                     className={header["nav__form-input"]}
