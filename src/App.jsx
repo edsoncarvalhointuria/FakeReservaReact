@@ -23,7 +23,7 @@ function App() {
 
     useEffect(() => {
         checkSession();
-        logar();
+        setTimeout(() => logar(), 200);
     }, []);
 
     useEffect(() => {
