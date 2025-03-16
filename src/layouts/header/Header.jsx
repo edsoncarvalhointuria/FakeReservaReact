@@ -499,6 +499,7 @@ function Header() {
                                     e.preventDefault();
                                     const form = new FormData(e.target)
                                         .get("pesquisa")
+                                        .trim()
                                         .split(" ")
                                         .join("+");
                                     redirect(`/loja/pesquisa?pesquisa=${form}`);
