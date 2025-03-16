@@ -3,7 +3,7 @@ import { useEffect, useState, useRef } from "react";
 import { getTamanhos } from "../../context/api";
 import home from "./home.module.scss";
 
-function PorTamanho() {
+function PorTamanho({ setLoading }) {
     const refCarrossel = useRef(0);
     const deslocamento = useRef(0);
     const [index, setIndex] = useState(0);
@@ -163,6 +163,7 @@ function PorTamanho() {
 
             refCarrossel.current.addEventListener("touchstart", start);
             refCarrossel.current.addEventListener("mousedown", start);
+            setLoading(false);
         })();
     }, []);
 

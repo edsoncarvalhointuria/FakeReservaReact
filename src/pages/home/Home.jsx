@@ -2,19 +2,23 @@ import Hero from "./Hero";
 import PorTamanho from "./PorTamanho";
 import Destaques from "./Destaques";
 import Banners from "./Banners";
-import { useEffect } from "react";
+import Spinner from "../../components/spinner/Spinner";
+import { useEffect, useState } from "react";
 import { useLoginContext } from "../../context/LoginContext";
 
 function Home() {
     const { logar } = useLoginContext();
+    const [isLoading, setLoading] = useState(true);
     useEffect(() => {
         logar();
     }, []);
     return (
         <main>
+            {isLoading ? <Spinner /> : <></>}
+
             <Hero />
 
-            <PorTamanho />
+            <PorTamanho setLoading={setLoading} />
 
             <Destaques />
 
