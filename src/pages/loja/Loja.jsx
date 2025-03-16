@@ -322,7 +322,7 @@ function Loja() {
                                 <div className="produtos__titulo">
                                     <div className="produtos__imagem">
                                         <img
-                                            src="/arrows-vertical-svgrepo-com.svg"
+                                            src="./arrows-vertical-svgrepo-com.svg"
                                             alt="Icone Setas"
                                         />
                                     </div>

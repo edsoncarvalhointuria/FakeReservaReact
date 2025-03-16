@@ -63,7 +63,7 @@ function Filtro({ setParams, params, prods }) {
                     <div className="filtro__titulo">
                         <div className="filtro__img">
                             <img
-                                src="/filters-2-svgrepo-com.svg"
+                                src="./filters-2-svgrepo-com.svg"
                                 alt="Imagem Filtro"
                             />
                         </div>
