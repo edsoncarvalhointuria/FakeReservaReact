@@ -173,7 +173,7 @@ function Checkout() {
                                     </div>
 
                                     <div className="checkout__endereco-cadastrado">
-                                        {infos.enderecos.map((v, i) => (
+                                        {infos?.enderecos?.map((v, i) => (
                                             <div key={i}>
                                                 <input
                                                     type="radio"
