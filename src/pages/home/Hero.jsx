@@ -179,7 +179,7 @@ function Hero() {
                         >
                             <source
                                 title="Hero Video"
-                                src="/reserva.mp4"
+                                src="./reserva.mp4"
                                 type="video/mp4"
                             />
                         </video>
